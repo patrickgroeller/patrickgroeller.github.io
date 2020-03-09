@@ -14,7 +14,9 @@
 
 
     <!--title-->
-    <h1><a href="index.html">patrick groeller</a></h1>
+    <h1>
+        <a href="index.html">patrick groeller</a>
+    </h1>
 
 
     <!-- menu -->
@@ -99,6 +101,74 @@
     
 </head>    
 <body>
-    <img src="pictures/home.jpeg" style="width: 100%">
-</body>   
+    
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- all other page content -->
+
+
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="pictures/img2.jpeg" style="width:100%">
+                </div>
+            </div>
+            <br>
+
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+
+            <!-- javascript -->
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+        </div>
+
+
+        <footer id="footer">
+            <h3 style="font-size: 10px">&copy; patrick groeller</h3>
+        </footer>
+    </div>
+    
+</body>
 </html>

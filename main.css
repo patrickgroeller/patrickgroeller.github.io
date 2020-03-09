@@ -41,7 +41,7 @@ body {
     height: 0%;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: 0;
     left: 0;
     background-color: rgb(255, 255, 255);
@@ -49,7 +49,6 @@ body {
     overflow-y: hidden;
     transition: 0.5s;
 }
-
 .overlay-content {
     font-family: 'Helvetica';
     position: relative;
@@ -58,7 +57,6 @@ body {
     text-align: center;
     margin-top: 30px;
 }
-
 .overlay a {
     padding: 8px;
     text-decoration: none;
@@ -66,11 +64,9 @@ body {
     color: #000;
     display: block;
     transition: 0.3s;
-    z-index: 5;
+    z-index: 10;
 }
-
 .overlay a:hover,
-
 .overlay a:focus {
     color: #e1e1e1;
 }
@@ -95,38 +91,26 @@ h1 {
     top: 2.5%;
 }
 
-h2 {
+h3 {
     font-family: 'Helvetica';
     letter-spacing: 0px;
-    color: #000;
-    font-weight: 250;
-    line-height: 1.5;
-    text-align: right;
+    color: darkslategrey;
+    font-weight: 10;
+    line-height: 1;
+    font-size: 0.5;
+    text-align: left;
     position: relative;
-    top: 2.5%;
-}
-
-p {
-    font-family: 'Helvetica';
-    letter-spacing: 0px;
-    color: #000;
-    font-weight: 100;
-    line-height: 1.75;
-    text-align: center;
-    position: relative;
-    top: 70%;
-    margin-top: 120px
-
-}
+    display: table;
+    }
+/* add to center copyright
+    margin-left: auto;
+    margin-right: auto;
+*/
 
 a {
     color: #222;
     text-decoration: none;
     position: relative;
-}
-
-*, *:before, *:after {
-box-sizing:border-box
 }
 
 img{
@@ -140,13 +124,23 @@ img{
     pointer-events: none;
     }
 
-/* Slideshow container */
+p {
+    font-family: 'Helvetica';
+    letter-spacing: 0px;
+    color: #000;
+    font-weight: 100;
+    line-height: 1.75;
+    text-align: center;
+    position: relative;
+    top: 70%;
+    margin-top: 120px
+}
 
 * {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
+  max-width: 65%;
   position: relative;
   margin: 1.3em auto;
   display: block;
@@ -162,7 +156,7 @@ img{
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: 3%;
+  width: auto;
   margin-top: -22px;
   padding: 16px;
   color: white;
@@ -171,7 +165,7 @@ img{
     transition: 0.5s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  z-index: 10;
+  z-index: 1;
 }
 
 /* Position the "next button" to the right*/
@@ -183,6 +177,34 @@ img{
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(255,255,255,0.4);
+}
+
+/* Next & previous buttons invisible*/
+.prev1, .next1 {
+  cursor: pointer;
+  position: absolute;
+  top: +22px;
+  width: 50%;
+  height: 100%;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+    transition: 0.5s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 5;
+}
+
+/* Position the "next button" to the right*/
+.next1 {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev1:hover, .next1:hover {
+  background-color: rgba(255,255,255,0.0);
 }
 
 /* Caption text */
@@ -238,4 +260,25 @@ img{
 @keyframes fade {
   from {opacity: .8} 
   to {opacity: 1}
-}    
+}
+
+#page-container {
+  position: relative;
+  min-height: 100%;
+}
+
+#content-wrap {
+  padding-bottom: 1.5rem;   /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  display: table;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2em;
+  margin-left:auto;
+  margin-right: auto;
+  height: -4.5rem;           /* Footer height */
+}
