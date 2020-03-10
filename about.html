@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <!--info-->
+    <div>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>patrick groeller</title>
+        <meta name="description" content="Portfolio DI Patrick Gröller">
+        <link rel="stylesheet" href="main.css">
+        <link href="dist/hamburgers.css" rel="stylesheet">
+    </div>
+
+
+    <!--title-->
+    <h1>
+        <a href="index.html">patrick groeller</a>
+    </h1>
+
+
+    <!-- menu -->
+    <div>
+        <!-- overlay menu content -->
+        <div id="navigation" class="overlay">
+
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">home</a>
+                <a href="work.html">work</a>
+                <a href="about.html">about</a>
+                <a href="contact.html">contact</a>
+            </div>
+
+        </div>
+
+        <!-- hamburger button -->
+        <div>
+            <div class="wrapper">
+                <button class="hamburger hamburger--spin-r" onclick="myFunction(this)" type="button">
+                    <span>
+                        <span class="hamburger-box" ;>
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+
+            <!-- movement of the hamburger button -->
+            <script>
+                /**
+                 * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+                 *
+                 * @private
+                 * @author Todd Motto
+                 * @link https://github.com/toddmotto/foreach
+                 * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+                 * @callback requestCallback      callback   - Callback function for each iteration.
+                 * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+                 * @returns {}
+                 */
+                var forEach = function(t, o, r) {
+                    if ("[object Object]" === Object.prototype.toString.call(t))
+                        for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t);
+                    else
+                        for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t)
+                };
+
+                var hamburgers = document.querySelectorAll(".hamburger");
+                if (hamburgers.length > 0) {
+                    forEach(hamburgers, function(hamburger) {
+                        hamburger.addEventListener("click", function() {
+                            this.classList.toggle("is-active");
+                        }, false);
+                    });
+                }
+            </script>
+        </div>
+
+        <!-- overlay menu animation -->
+        <script>
+            function openNav() {
+                document.getElementById("navigation").style.height = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("navigation").style.height = "0%";
+            }
+
+            function myFunction(x) {
+                x.classList.toggle("change");
+                if (x.classList.contains("change")) {
+                    openNav();
+                } else {
+                    closeNav();
+                }
+            }
+        </script>
+    </div>
+
+</head>
+<body>
+
+        
+        <div class="slideshow-container">
+        </div>
+
+            <p>DI Patrick Gröller
+                <br>born on march 14th, 1989
+                <br>in Eisenstadt (Austria)
+                <br>
+                <br>working experience
+                <br>
+                <br>12/2018 - now
+                <br>bim consulting at the construction firm östu stettin gmbh
+                <br>
+                <br>11/2015 - 11/2018
+                <br>project architect at the architectural office studio singer zt gmbh
+                <br>
+                <br>02/2013 - 12/2013
+                <br>project architect at the architectural office tillner&willinger zt gmbh
+                <br>
+            </p>
+        
+        <div style="text-align:center">
+            <span class="dot"></span>
+        </div>
+        
+
+     
+        <footer id="footer">
+            <h3 style="font-size: 10px; position:fixed; left: 0; bottom: 0; width: 100%; color: black; text-align: center">&copy; patrick groeller</h3>
+        </footer>
+
+    
+</body>
+</html>
