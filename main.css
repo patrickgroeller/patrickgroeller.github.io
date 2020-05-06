@@ -111,6 +111,8 @@ a {
     color: #222;
     text-decoration: none;
     position: relative;
+    font-size: 7pt;
+    line-height: normal;
 }
 
 img{
@@ -123,6 +125,13 @@ img{
     display: block;
     pointer-events: none;
     }
+
+.landingpage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
 
 p {
     font-family: 'Helvetica';
