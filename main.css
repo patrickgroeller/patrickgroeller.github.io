@@ -133,6 +133,14 @@ img{
   width: 55%;
 }
 
+.logo{
+    background: transparent;
+    max-width: 100%;
+    position: relative;
+    display: block;
+    pointer-events: none;
+    }
+
 p {
     font-family: 'Helvetica';
     letter-spacing: 0px;
