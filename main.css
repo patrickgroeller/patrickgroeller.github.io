@@ -71,6 +71,49 @@ body {
     color: #e1e1e1;
 }
 
+
+/* Projektübersicht */
+.thumbnail-container {
+  position: relative;
+  width: 100%;
+}
+
+.thumbnail-image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.thumbnail-middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.thumbnail-container:hover .thumbnail-image {
+  opacity: 0.3;
+}
+
+.thumbnail-container:hover .thumbnail-middle {
+  opacity: 1;
+}
+
+.thumbnail-text {
+  background-color: #FFFFFF00;
+  color: black;
+  font-size: 16px;
+  padding: 16px;
+}
+
+
 @media screen and (max-height: 450px) {
     .overlay {
         overflow-y: auto;

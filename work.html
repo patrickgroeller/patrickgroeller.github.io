@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
-    <!--info-->
+ <!--info-->
     <div>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,7 @@
         <link rel="stylesheet" href="main.css">
         <link href="dist/hamburgers.css" rel="stylesheet">
     </div>
-    
+
     <style>
         img {
             width: 35%;
@@ -20,11 +19,7 @@
 
     <!--title-->
     <h1>
-        <div>
-            <a href="index.html">
-                <img src="logo/logo_final_complete.svg" class="logo">
-            </a>
-        </div>
+        <a href="index.html"><img src="logo/logo_final_complete.svg" class="logo"></a>
     </h1>
 
 
@@ -107,96 +102,256 @@
             }
         </script>
     </div>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
 
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #FFFFFF00;
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
 </head>
 <body>
-       
 
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <img src="pictures/img1.jpeg" style="width:100%">
-                    <div class="text"></div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <img src="pictures/img2.jpeg" style="width:100%">
-                    <div class="text"></div>
-                </div>
-
-
-                <div class="mySlides fade">
-                    <div class="numbertext"></div>
-                    <img src="pictures/img3.jpeg" style="width:100%">
-                    <div class="text"></div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!-- Next and previous buttons -->
-                <a class="prev1" onclick="plusSlides(-1)"></a>
-                <a class="next1" onclick="plusSlides(1)"></a>
-
-            </div>
-            <br>
-
-
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-
-
-            <!-- javascript -->
-            <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
-
-                // Next/previous controls
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
-
-                // Thumbnail image controls
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) {
-                        slideIndex = 1
-                    }
-                    if (n < 1) {
-                        slideIndex = slides.length
-                    }
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                }
-            </script>
+<div class="slideshow-container">
+</div>
       
-        
-            
-        <footer id="footer">
+<!-- Projektübersicht CSS -->        
+<style>
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 33,333%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of three columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+
+<!-- Projektübersicht -->
+<div class="row">
+<!-- Spalte 1 -->
+  <div class="column">
+  
+    <!-- Projekt 1-->  
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img1.jpeg" alt="Projekt 1" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 1</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 4-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img2.jpeg" alt="Projekt 4" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 4</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 7-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img3.jpeg" alt="Projekt 7" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 7</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 10-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img1.jpeg" alt="Projekt 10" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 10</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 13-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img2.jpeg" alt="Projekt 13" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 13</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 16-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img3.jpeg" alt="Projekt 16" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="work.html">
+    <div class="thumbnail-text">Projekt 16</div></a>
+    </div>
+    </div>
+    
+  </div>
+<!-- Spalte 2 -->
+  <div class="column">
+    <!-- Projekt 2-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img2.jpeg" alt="Projekt 2" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 2</div></a>
+    </div>
+    </div>
+    
+     <!-- Projekt 5-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img3.jpeg" alt="Projekt 5" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 5</div></a>
+    </div>
+    </div>
+    
+     <!-- Projekt 8-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img1.jpeg" alt="Projekt 8" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 8</div></a>
+    </div>
+    </div>
+    
+     <!-- Projekt 11-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img2.jpeg" alt="Projekt 11" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 11</div></a>
+    </div>
+    </div>
+    
+     <!-- Projekt 14-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img3.jpeg" alt="Projekt 14" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 14</div></a>
+    </div>
+    </div>
+    
+     <!-- Projekt 17-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img1.jpeg" alt="Projekt 17" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 17</div></a>
+    </div>
+    </div>
+  </div>
+<!-- Spalte 3 -->
+  <div class="column">
+    <!-- Projekt 3-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img3.jpeg" alt="Projekt 3" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 3</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 6-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img1.jpeg" alt="Projekt 6" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 6</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 9-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img2.jpeg" alt="Projekt 9" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 9</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 12-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img3.jpeg" alt="Projekt 12" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 12</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 15-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img1.jpeg" alt="Projekt 15" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 15</div></a>
+    </div>
+    </div>
+    
+    <!-- Projekt 18-->
+    <div class="thumbnail-container">
+    <a href="project.html"><img src="pictures/img2.jpeg" alt="Projekt 18" class="thumbnail-image" style="width:100%"></a>
+    <div class="thumbnail-middle"><a href="project.html">
+    <div class="thumbnail-text">Projekt 18</div></a>
+    </div>
+    </div>
+  </div>
+</div>
+  
+</body>
+<footer id="footer">
             <h3 style="font-size: 10px; position:fixed; left: 0; bottom: 0; width: 100%; color: black; text-align: center">&copy; patrick groeller</h3>
         </footer>
-
-    
-</body>
 </html>
